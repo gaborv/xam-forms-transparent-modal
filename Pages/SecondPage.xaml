@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<custom:ModalHostPage
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:custom="clr-namespace:TransparentModal.CustomFormElements;assembly=TransparentModal"
+	x:Class="TransparentModal.Pages.SecondPage">
+	<custom:ModalHostPage.Content>
+
+	<Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+		<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Image Source="background.png" Aspect="AspectFill" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4"/>
+
+			<Button Grid.Row="1" x:Name="btnNextPage" Text="Open pop-up using custom renderers" Font="Helvetica,24" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+
+			<Button Grid.Row="2" x:Name="btnPrevPage" Text="&lt;- Back to previous page" Font="Helvetica,14" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+
+	</Grid>
+
+	</custom:ModalHostPage.Content>
+</custom:ModalHostPage>

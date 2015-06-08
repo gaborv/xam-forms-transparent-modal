@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<custom:ModalPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:custom="clr-namespace:TransparentModal.CustomFormElements;assembly=TransparentModal"
+	x:Class="TransparentModal.Pages.PopUpPage">
+
+	<custom:ModalPage.Content>
+		
+		<!-- Page layout grid -->
+		<Grid ColumnSpacing="0" RowSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="10*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="10*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<!-- Shadow around -->
+			<BoxView x:Name="Shadow1" Color="#4000" Grid.Row="0" Grid.ColumnSpan="3" />
+			<BoxView x:Name="Shadow2" Color="#4000" Grid.Row="1" Grid.Column="0" />
+			<BoxView x:Name="Shadow3" Color="#4000" Grid.Row="1" Grid.Column="2" />
+			<BoxView x:Name="Shadow4" Color="#4000" Grid.Row="2" Grid.ColumnSpan="3" />
+
+			<!-- Content layout grid -->
+			<custom:BlurredFrame x:Name="Info" Grid.Row="1" Grid.Column="1" VerticalOptions="Fill" HorizontalOptions="Fill" Padding="0">
+				<Grid x:Name="ContentGrid"  ColumnSpacing="0" RowSpacing="1" VerticalOptions="Fill" HorizontalOptions="Fill" Padding="0">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+
+					<Label Grid.Row="1" Text="Hello!" XAlign="Center"/>
+					<Label Grid.Row="2" Text="This is a custom pop-up." XAlign="Center"/>
+
+				</Grid>
+			</custom:BlurredFrame>
+		</Grid>
+
+	</custom:ModalPage.Content>
+</custom:ModalPage>

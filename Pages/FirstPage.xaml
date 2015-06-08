@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TransparentModal.Pages.FirstPage">
+	<ContentPage.Content>
+	<Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+		<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="3*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Label Grid.Row="0" Text="Initial page using Xamarins navigation stack" HorizontalOptions="Center" VerticalOptions="Center" />
+
+			<Button x:Name="btnNextPage" Grid.Row="1" Text="Go to 'Second page' -&gt;" Font="Helvetica,24" HorizontalOptions="Center" VerticalOptions="Center" />
+
+	</Grid>
+	</ContentPage.Content>
+</ContentPage>
