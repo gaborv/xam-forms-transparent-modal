@@ -16,7 +16,7 @@ namespace TransparentModal.Pages
         {
             InitializeComponent();
 
-			// Close this pop-up using the cutom mechanis on ModalPageRenderer
+			// Close this pop-up using the custom mechanism on ModalPageRenderer
 			CloseCommand = new Command(() => Close());
 
             Shadow1.GestureRecognizers.Add(new TapGestureRecognizer{ Command = CloseCommand });

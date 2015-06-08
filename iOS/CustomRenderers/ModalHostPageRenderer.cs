@@ -39,7 +39,7 @@ namespace TransparentModal.iOS.CustomRenderers
             }
 
             // HACK: http://stackoverflow.com/questions/25762466/trying-to-dismiss-the-presentation-controller-while-transitioning-already
-            // Since the pop is applying the hack, we might need to wait here too...
+            // Since the pop / close operation on the ModalPage is applying the hack, we might need to wait here too...
             DispatchQueue.MainQueue.DispatchAfter(DispatchTime.Now, async () =>
                 {
                     e.DisplayingPageTask = this.PresentViewControllerAsync(renderer.ViewController, true);
